@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADiii</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Floating background shapes -->
+<div class="bg-shape shape1"></div>
+<div class="bg-shape shape2"></div>
+<div class="bg-shape shape3"></div>
+
+<div class="main-wrapper">
+
+    <!-- Sidebar Stats -->
+    <div class="sidebar">
+        <h2>📊 Live Stats</h2>
+        <p>Score: <span id="liveScore">0</span></p>
+        <p>High Score: <span id="sidebarHighScore">0</span></p>
+        <p>Category: <span id="selectedCategory">-</span></p>
+        <p>Difficulty: <span id="selectedDifficulty">-</span></p>
+    </div>
+
+    <!-- Main Card -->
+    <div class="main-container">
+
+        <!-- START SCREEN -->
+        <div id="startScreen">
+            <h1>🤖 AI Adaptive Quiz Pro</h1>
+
+            <div class="settings">
+                <label>Category</label>
+                <select id="category">
+                    <option value="9">General Knowledge</option>
+                    <option value="18">Computer Science</option>
+                    <option value="21">Sports</option>
+                    <option value="23">History</option>
+                    <option value="17">Science & Nature</option>
+                </select>
+
+                <label>Difficulty</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+
+                <label>Questions</label>
+                <select id="amount">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                </select>
+            </div>
+
+            <button id="startBtn">Start Quiz</button>
+        </div>
+
+        <!-- QUIZ SCREEN -->
+        <div id="quizScreen" class="hidden">
+
+            <div class="top-bar">
+                <div id="questionCount"></div>
+                <div id="timer">⏳ 15</div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+
+            <h2 id="questionText"></h2>
+            <div id="optionsContainer" class="options"></div>
+            <button id="nextBtn" class="hidden">Next</button>
+
+        </div>
+
+        <!-- RESULT SCREEN -->
+        <div id="resultScreen" class="hidden">
+            <h2>🎉 Quiz Completed</h2>
+            <p id="finalScore"></p>
+            <button id="restartBtn">Restart</button>
+        </div>
+
+        <footer>
+        </footer>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
